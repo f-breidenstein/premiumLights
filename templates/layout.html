@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>Farbtastic</title>
+		<script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='farbtastic.js') }}"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='farbtastic.css') }}" type="text/css" />
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#demo').hide();
+				$('#picker').farbtastic('#color');
+			});
+			
+			function httpGet(theUrl)
+			{
+				var xmlHttp = null;
+
+				xmlHttp = new XMLHttpRequest();
+				xmlHttp.open( "GET", theUrl, false );
+				xmlHttp.send( null );
+			};
+			
+			function send(){
+				color = $.farbtastic('#picker').color;
+				r = color.substring(1,3);
+				g = color.substring(3,5);
+				b = color.substring(5,7);
+				r = parseInt(r,16);
+				g = parseInt(g,16);
+				b = parseInt(b,16);
+				httpGet("http://192.168.23.100:5000/send/red/"+r);
+				httpGet("http://192.168.23.100:5000/send/green/"+g);
+				httpGet("http://192.168.23.100:5000/send/blue/"+b);				
+			};
+			
+		</script>
+	</head>
+	<body>
+		{% block content %} {% endblock %}
+	</body>
+</html>
