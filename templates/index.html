@@ -3,17 +3,15 @@
 
 
 <h2>RGB LEDStrip</h2>
-<form action="" style="width: 400px;">
-  
-  <div id="picker"></div>
-</form>
+
+<div id="rgbPicker"></div>
 
 <br \>
 
 <a href="/off">Strip off</a>
-<br \>
-<h2>Powerswitches</h2>
-Switch 1
-<a href="/power/1/1">OFF</a>
-<a href="/power/1/0">ON</a>
+<script src='{{ url_for('static', filename='scale.fix.js') }}'></script>
+<script src='{{ url_for('static', filename='onecolor.js') }}'></script>
+<script src='{{ url_for('static', filename='colorjoe.js') }}'></script>
+<script src='{{ url_for('static', filename='demo.js') }}'></script>
+
 {% endblock %}
