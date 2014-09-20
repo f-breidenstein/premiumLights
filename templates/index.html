@@ -1,19 +1,42 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
 <h2>RGB LEDStrip</h2>
-<form action="" style="width: 400px;">
-  
-  <div id="picker"></div>
-</form>
+
+<div id="slider">
+	<input id="slider1" type="range" min="0" max="100" step="1" value="0" onchange="updateSlider()"/><br/>
+	<input id="slider2" type="range" min="0" max="100" step="1" value="0" onchange="updateSlider()"/><br/>
+	<input id="slider3" type="range" min="0" max="100" step="1" value="0" onchange="updateSlider()"/><br/>
+</div>
 
 <br \>
-
 <a href="/off">Strip off</a>
-<br \>
+
+
 <h2>Powerswitches</h2>
-Switch 1
-<a href="/power/1/1">OFF</a>
-<a href="/power/1/0">ON</a>
+
+<div>
+	Switch 1
+	<a href="/power/1/1">OFF</a>
+	<a href="/power/1/0">ON</a>
+</div>
+
+<div>
+	Switch 2
+	<a href="/power/2/1">OFF</a>
+	<a href="/power/2/0">ON</a>
+</div>
+
+<div>
+	Switch 3
+	<a href="/power/3/1">OFF</a>
+	<a href="/power/3/0">ON</a>
+</div>
+
+<div>
+	Switch 4
+	<a href="/power/4/1">OFF</a>
+	<a href="/power/4/0">ON</a>
+</div>
+
 {% endblock %}
