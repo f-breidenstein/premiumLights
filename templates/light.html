@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block main %}
+
+<h2>RGB LEDStrip</h2>
+
+<div id="slider">
+	<img class="sliderimages" src="{{ url_for('static', filename='img/hue.png') }}" >
+	<input id="slider1" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
+	<img class="sliderimages" src="{{ url_for('static', filename='img/sat.png') }}" >
+	<input id="slider2" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
+	<img class="sliderimages" src="{{ url_for('static', filename='img/val.png') }}" >
+	<input id="slider3" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
+</div>
+
+<br \>
+<a href="/off">Strip off</a>
+
+{% endblock %}

@@ -34,7 +34,7 @@ def off():
     return redirect(url_for('index'))
 
 @app.route('/power/<channel>/<value>')
-def power(channel,value):
+def switch_power(channel,value):
     args = ("sudo","/usr/bin/send",homecode,str(channel),str(value)) 
     popen = subprocess.Popen(args)
     popen.wait()
@@ -42,7 +42,20 @@ def power(channel,value):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    #return render_template('index.html')
+    return light() 
+
+@app.route('/light')
+def light():
+    return render_template('light.html')
+
+@app.route('/power')
+def power():
+    return render_template('power.html')
+
+@app.route('/temp')
+def temp():
+    return render_template('temp.html')
 
 if __name__ == '__main__':
         app.run(host="0.0.0.0",

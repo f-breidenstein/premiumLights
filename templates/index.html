@@ -1,49 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<h2>RGB LEDStrip</h2>
+<div class="off-canvas-wrap" data-offcanvas> 
+	<div class="inner-wrap">
+		<nav class="tab-bar">
+			<section class="left-small">
+				<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			</section>
+			<section class="middle tab-bar-section">
+				<h1 class="title">Foundation</h1>
+			</section>
+		</nav>
 
-<div id="slider">
-	
+		<aside class="left-off-canvas-menu">
+			<ul class="off-canvas-list"> <li><label>Foundation</label></li>
+				<li><a href="/light">Light</a></li>
+				<li><a href="/power">Power</a></li>
+				<li><a href="/temp">Temp</a></li>
+			</ul>
+		</aside>
 
-	<img class="sliderimages" src="{{ url_for('static', filename='img/hue.png') }}" >
-	<input id="slider1" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
+		<section class="main-section">
+			{%block main %}
+			{% endblock %}
+		</section>
 
-	<img class="sliderimages" src="{{ url_for('static', filename='img/sat.png') }}" >
-	<input id="slider2" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
-
-	<img class="sliderimages" src="{{ url_for('static', filename='img/val.png') }}" >
-	<input id="slider3" type="range" min="0" max="1" step="0.1" value="0" onchange="updateSlider()"/><br/>
-</div>
-
-<br \>
-<a href="/off">Strip off</a>
-
-
-<h2>Powerswitches</h2>
-
-<div>
-	Switch 1
-	<a href="/power/1/1">OFF</a>
-	<a href="/power/1/0">ON</a>
-</div>
-
-<div>
-	Switch 2
-	<a href="/power/2/1">OFF</a>
-	<a href="/power/2/0">ON</a>
-</div>
-
-<div>
-	Switch 3
-	<a href="/power/3/1">OFF</a>
-	<a href="/power/3/0">ON</a>
-</div>
-
-<div>
-	Switch 4
-	<a href="/power/4/1">OFF</a>
-	<a href="/power/4/0">ON</a>
+		<a class="exit-off-canvas"></a>
+	</div>
 </div>
 
 {% endblock %}
