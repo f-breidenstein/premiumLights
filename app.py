@@ -38,7 +38,7 @@ def switch_power(channel,value):
     args = ("sudo","/usr/bin/send",homecode,str(channel),str(value)) 
     popen = subprocess.Popen(args)
     popen.wait()
-    return redirect(url_for('index'))
+    return redirect(url_for('power'))
 
 @app.route('/')
 def index():
