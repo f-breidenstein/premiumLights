@@ -11,7 +11,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
 }
 
-#content{
+.main-section{
 	width: 80%;
 	margin-left: auto;
     margin-right: auto;
