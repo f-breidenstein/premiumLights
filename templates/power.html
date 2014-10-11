@@ -1,28 +1,28 @@
 {% extends "index.html" %}
 {% block main %}
+	
+	<ul class="col-12 power">
+		<li>
+			<span>Regal</span>
+			<a href="/power/1/1">OFF</a>
+			<a href="/power/1/0">ON</a>
+		</li>
+		<li>
+			<span>Verstärker</span>
+			<a href="/power/2/0">OFF</a>
+			<a href="/power/2/1">ON</a>
+		</li>
+		<li>
+			<span>IKEA Lampe</span>
+			<a href="/power/3/0">OFF</a>
+			<a href="/power/3/1">ON</a>
+		</li>
+		<li>
+			<span>Switch 4</span>
+			<a href="/power/4/0">OFF</a>
+			<a href="/power/4/1">ON</a>
+		</li>
 
-<div>
-	Regal
-	<a href="/power/1/1">OFF</a>
-	<a href="/power/1/0">ON</a>
-</div>
-
-<div>
-	Verstärker
-	<a href="/power/2/0">OFF</a>
-	<a href="/power/2/1">ON</a>
-</div>
-
-<div>
-	IKEA Lampe
-	<a href="/power/3/0">OFF</a>
-	<a href="/power/3/1">ON</a>
-</div>
-
-<div>
-	Switch 4
-	<a href="/power/4/0">OFF</a>
-	<a href="/power/4/1">ON</a>
-</div>
+	</ul>
 
 {% endblock %}

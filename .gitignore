@@ -37,3 +37,6 @@ nosetests.xml
 
 # Custom
 .virtualenv/
+
+# Nervige Webdesigner
+.sass-cache

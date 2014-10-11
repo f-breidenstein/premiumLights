@@ -1,0 +1,10 @@
+.power li{
+	padding: ($gutter / 2) 0;
+	@include small-only{
+		padding: 0 0 20px 0;
+	}
+}
+.power span{
+	width: 125px;
+	display: inline-block;
+}

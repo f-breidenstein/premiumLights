@@ -1,32 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="off-canvas-wrap" data-offcanvas> 
-	<div class="inner-wrap">
-		<nav class="tab-bar">
-			<section class="left-small">
-				<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-			</section>
-			<section class="middle tab-bar-section">
-				<h1 class="title">Foundation</h1>
-			</section>
-		</nav>
+	<header class="header row">
+		<div class="col-12">
+			<h1 class="title">r00m-Control</h1>
+			<nav>
+				<ul class="menu"> 
+					<li><a href="/light">Light</a></li>
+					<li><a href="/power">Power</a></li>
+					<li><a href="/temp">Temp</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="row">
 
-		<aside class="left-off-canvas-menu">
-			<ul class="off-canvas-list"> <li><label>Foundation</label></li>
-				<li><a href="/light">Light</a></li>
-				<li><a href="/power">Power</a></li>
-				<li><a href="/temp">Temp</a></li>
-			</ul>
-		</aside>
+		{%block main %}
+		{% endblock %}
 
-		<section class="main-section">
-			{%block main %}
-			{% endblock %}
-		</section>
-
-		<a class="exit-off-canvas"></a>
-	</div>
-</div>
+	</section>
 
 {% endblock %}

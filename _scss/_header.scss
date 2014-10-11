@@ -1,0 +1,14 @@
+@include small-only{
+	.header{
+		margin-bottom: 20px;
+	}
+}
+
+.title, .menu{
+	display: inline-block;
+}
+
+.menu li{
+	display: inline-block;
+	margin-right: 15px;
+}
