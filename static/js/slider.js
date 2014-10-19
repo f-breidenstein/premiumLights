@@ -41,7 +41,8 @@ function updateSlider() {
 	g = Math.floor(rgb[1])
 	b = Math.floor(rgb[2])
 
-	httpGet("http://192.168.23.117:5000/send/red/"+r);
-	httpGet("http://192.168.23.117:5000/send/green/"+g);
-	httpGet("http://192.168.23.117:5000/send/blue/"+b);	
+	host = window.location.host
+	httpGet("http://" + host + "/send/red/"+r);
+	httpGet("http://" + host + "/send/green/"+g);
+	httpGet("http://" + host + "/send/blue/"+b);	
 }
